@@ -56,8 +56,6 @@
                 <configuration>
                     <includes>
                         <include>**/*Test.java</include>
-                        <include>**/*SmokeTest.java</include>
-                        <include>**/*E2eTest.java</include>
                     </includes>
                 </configuration>
             </plugin>
