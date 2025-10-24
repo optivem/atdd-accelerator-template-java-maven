@@ -83,9 +83,13 @@ jobs:
     - name: Setup Java
       uses: actions/setup-java@v4
       with:
-        java-version: 25
+        java-version: 21
         distribution: temurin
         cache: maven
+
+    - name: Make Maven Wrapper executable
+      run: chmod +x ./mvnw
+      working-directory: system-test
 
     - name: Run Acceptance Tests
       run: echo "Run Acceptance Tests"

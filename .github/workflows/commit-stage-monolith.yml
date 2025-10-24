@@ -40,6 +40,10 @@ jobs:
         distribution: temurin
         cache: maven
 
+    - name: Make Maven Wrapper executable
+      run: chmod +x ./mvnw
+      working-directory: monolith
+
     - name: Build with Maven
       run: ./mvnw clean package
       working-directory: monolith
