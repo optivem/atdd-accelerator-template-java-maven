@@ -36,10 +36,10 @@ jobs:
     - name: Setup Java
       uses: actions/setup-java@v4
       with:
-        java-version: 21
+        java-version: 25
         distribution: temurin
         cache: maven
-
+    
     - name: Make Maven Wrapper executable
       run: chmod +x ./mvnw
       working-directory: monolith
