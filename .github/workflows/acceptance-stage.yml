@@ -98,7 +98,9 @@ jobs:
       run: echo "Run External System Contract Tests"
 
     - name: Run E2E Tests
-      run: ./mvnw test -Dtest=com.optivem.atddaccelerator.template.systemtest.e2etests.*
+      # Use a surefire-compatible class name pattern so tests are discovered correctly.
+      # The package-style pattern didn't match; match test class names ending with E2eTest instead.
+      run: ./mvnw test -Dtest=*E2eTest
       working-directory: system-test
   
   prerelease:
