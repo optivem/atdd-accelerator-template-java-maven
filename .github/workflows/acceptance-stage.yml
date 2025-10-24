@@ -85,13 +85,7 @@ jobs:
       with:
         java-version: 25
         distribution: temurin
-
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v4
-    
-    - name: Make Gradle Wrapper executable
-      run: chmod +x ./gradlew
-      working-directory: system-test
+        cache: maven
 
     - name: Run Acceptance Tests
       run: echo "Run Acceptance Tests"
@@ -100,7 +94,7 @@ jobs:
       run: echo "Run External System Contract Tests"
 
     - name: Run E2E Tests
-      run: ./gradlew test --tests com.optivem.atddaccelerator.template.systemtest.e2etests.*
+      run: ./mvnw test -Dtest=com.optivem.atddaccelerator.template.systemtest.e2etests.*
       working-directory: system-test
   
   prerelease:
