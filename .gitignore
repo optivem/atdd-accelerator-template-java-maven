@@ -13,14 +13,6 @@
 .settings/
 bin/
 
-# Gradle
-.gradle/
-build/
-gradle-app.setting
-!gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
-
 # Maven
 target/
 pom.xml.tag
