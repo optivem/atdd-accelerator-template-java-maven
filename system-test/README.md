@@ -29,7 +29,7 @@ Run All Tests
 Run Smoke Tests Only
 
 ```shell
-./mvnw test -Dtest=*SmokeTest
+./mvnw test -Dtest="com.optivem.atddaccelerator.template.systemtest.smoketests.**"
 ```
 
 Stop Docker Containers
